@@ -8,7 +8,7 @@
   "main": "app.js",
   "moduleType": [],
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://github.com/trehnert23/ng-directives-lecture",
   "ignore": [
     "**/.*",
     "node_modules",

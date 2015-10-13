@@ -6,16 +6,33 @@
 
   <link rel="stylesheet" href="bower_components\bootstrap\dist\css\bootstrap.min.css">
   <link rel="stylesheet" href="css/main.css">
-  <script src="bower_components\angular\angular.min.js"></script>
+  <script src="bower_components/angular/angular.min.js"></script>
   <script src="app.js"></script>
 </head>
 
 <body >
+  <h1 class="header">INSTRUCTORS</h1>
   <div ng-controller="Controller">
-    <!--  Traverses $scope.students in app.js controller -->
-    <div ng-repeat="instructor in instructors">
-      {{instructor.name}} {{instructor.github}} {{instructor.cohort}} {{instructor.position}}
+    <!--  Traverses $scope.instructors in app.js controller -->
+    <div class="list" ng-repeat="instructor in instructors | orderBy: 'cohort'">
+      <div class="instructor">
+        <div class="info">
+          <img class="image" ng-src="{{instructor.image}}"><br>
+          Name: {{instructor.name}} <br>
+          Github: <a class="github" href='http://www.github.com/{{instructor.github}}'>{{instructor.github}}</a> <br>
+          Cohort: {{instructor.cohort}} <br>
+          Position: {{instructor.position}} <br>
+          <span>Times Saying Automagic: {{count}}</span>
+          <button ng-click="count = count + 1" ng-init="count=0">
+            +1
+          </button>
+          <div ng-if="count >= 10">You're A Wizard!</div>
+          <!-- <my-directive></my-directive> -->
+        </div>
+      </div>
     </div>
   </div>
 </body>
 </html>
+
+
