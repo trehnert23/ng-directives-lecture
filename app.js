@@ -57,7 +57,7 @@ angular.module('GABook', [])
        github: 'jlopker',
        image: 'https://avatars1.githubusercontent.com/u/3010270?',
        cohort: 23,
-     },
+     }
     ];
     $scope.orderProperty = 'cohort';
   }])
