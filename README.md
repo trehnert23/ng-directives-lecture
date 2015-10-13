@@ -18,6 +18,28 @@ npm install
 
 We will be using a separate `templates` folder to store our partial html files.  To access these files from our index.html and app.js files, we will need to serve our website instead of accessing it statically 
 
+
+##Custom Directive Structure
+
+This is a basic directive structure for including customized content. Note the name of the directive is `myDirective` in camelCase.  Names of directives in Angular's JS files must be **camelCase**.  Attach this to your module instantiation:
+
+```javascript
+.directive('myDirective', function() {
+    return {
+      restrict: 'E', // Element only
+      templateUrl: 'path to my template',
+      controller: function($scope){
+        console.log("Hi, I can debuge the scope!" , $scope);
+      },
+  }})
+```
+
+To call this directive, simply use the **snake-case** of the directive name:
+
+```html
+<my-directive></my-directive>
+```
+
 ## Base Challenges
 1. Refactor the html inside the `ng-repeat` div into a custom directive called `instructor-namecard`
 
