@@ -60,14 +60,5 @@ angular.module('GABook', [])
      }
     ];
     $scope.orderProperty = 'cohort';
-  }])
-  .directive('instructorNamecard', function() {
-    return {
-      restrict: 'E',
-      templateUrl: 'templates/instructor-namecard.html',
-      controller: function($scope){
-        console.log($scope.instructor.name + ' has been loaded.');
-      },
-  }})
-
+  }]);
 })(window.angular);
