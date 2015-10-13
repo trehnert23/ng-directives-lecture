@@ -16,6 +16,9 @@
   <div ng-controller="Controller">
     <!--  Traverses $scope.students in app.js controller -->
     <div ng-repeat="instructor in instructors | orderBy:orderProperty">
+
+      <div class="name-card">
+
       <img ng-src={{instructor.image}} width='100px'>
 
       <h3>Name: {{instructor.name}} ({{instructor.position}} Extraordinaire)</h3>
@@ -35,8 +38,8 @@
       <div ng-if="count >= 10">
         <em>This instructor is a wizard!</em>
       </div>
+    </div>
 
-      <hr>
     </div>
   </div>
 </body>
