@@ -18,7 +18,7 @@
     <div ng-repeat="instructor in instructors | orderBy:orderProperty">
       <img ng-src={{instructor.image}} width='100px'>
 
-      <h3>Name: {{instructor.name}}</h3>
+      <h3>Name: {{instructor.name}} ({{instructor.position}} Extraordinaire)</h3>
 
       <h3>Github Address: <a href="{{'https://www.github.com/' + instructor.github}}" target="new">{{ instructor.github}}</a></h3>
 
